@@ -2,10 +2,9 @@
 terraform {
   backend "s3" {
     encrypt        = "true"
-    bucket         = "111111111111-tf-remote-state"
+    bucket         = "058264173995-tf-remote-state"
     dynamodb_table = "tf-state-lock"
-    key            = "git://github.com/mygithuborg/role-vending-machine.git"
+    key            = "github.com/sirrombtestorg/role-vending-machine-lab10.git"
     region         = "us-east-2"
-    profile        = "111111111111"
   }
 }
