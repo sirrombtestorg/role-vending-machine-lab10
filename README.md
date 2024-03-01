@@ -101,6 +101,7 @@ Figure below, shows the RVM bootstrapping process.
 ### Step 6: Deploying RVM-assumable roles across the AWS Organization
 
 1. Using a method such as AFT or StackSets, deploy the RVM Workflow Role and create an IAM OIDC provider in each account where you expect RVM to deploy roles. You can find Terraform definitions for both of these resources in `scripts/assumed_role` and `scripts/oidc_provider` folders.
+2. Note that this step includes provisioning the IAM OIDC provider to the RVM account. Subsequent steps will not be possible without the OIDC setup.
 
 ### Step 7: RVM variables and backend setup
 
